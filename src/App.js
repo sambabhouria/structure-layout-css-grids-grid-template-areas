@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='container'>
+      <aside></aside>
+      <header>
+        <div style={{display: 'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center', alignSelf:'center', height:'100%',margin: '0 12px'}}>
+          <div style={{flexGrow: 1, textAlign:'center'}}><span style={{color: "white"}}>Left</span></div>
+          <div  style={{flexGrow: 5, textAlign:'center'}}><span style={{color: "white"}}>Middle</span></div>
+          <div  style={{flexGrow: 2, textAlign:'center'}}><span style={{color: "white"}}>Right</span></div>
+        </div>
       </header>
+      <section></section>
+      <section></section>
+      <section></section>
+      <main></main>
+      <footer></footer>
     </div>
   );
 }

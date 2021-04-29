@@ -1,13 +1,76 @@
-body {
+*{
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body, html, .container {
+  height: 100vh;
+  width: 100vw;
+  background: #F1F2F6;
+}
+
+.container {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  /* grid-template-rows: repeat(auto, 5); */
+    /* space between columns for demo */
+  grid-gap: 10px;
+  grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+  grid-template-areas:
+      "sect1"
+      "sect2"
+      "sect3"
+      "main"
+      "footer";
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: #007FFF;
+}
+
+header {
+  grid-area: header;
+  background-color: #91C8FF;
+  background-image: url("./assets/images/header.png");
+}
+
+section:nth-of-type(1) {
+  grid-area: sect1;
+  background-color: #B3D8FD;
+}
+section:nth-of-type(2) {
+  grid-area: sect2;
+  background-color: #5E86AF;
+}
+section:nth-of-type(3) {
+  grid-area: sect3;
+  background-color: #6D9FD2;
+}
+main {
+  grid-area: main;
+  background-color: #7DA9D5;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #588EC3;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .container {
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto 27% 27% 27%;
+      grid-template-rows: 8% 30% auto 10%;
+      grid-template-areas:
+          "sidebar header header header"
+          "sidebar sect1  sect2  sect3"
+          "sidebar main   main   main"
+          "sidebar footer footer footer";
+  }
+
 }

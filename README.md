@@ -9,3 +9,6 @@ https://origamid.com/projetos/flexbox-guia-completo/#:~:text=Por%20padr%C3%A3o%2
 In the project directory, you can run:
 
 ### `yarn start`
+
+### `screenShot`
+<img src="src/assets/images/1.png" width="300" height="300"/><img src="src/assets/images/2.png" width="300" height="300"/>
